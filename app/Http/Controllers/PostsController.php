@@ -3,24 +3,29 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use Post;
+use App;
 
 class PostsController extends Controller
 {
     public function index() {
-        return view('posts.index');
+        $posts = App\Post::all();
+        return view('posts.index', compact('posts'));
     }
     public function news() {
-        return view('posts.news');
+        $posts = App\Post::all();
+        return view('posts.news', compact('posts'));
     }
     public function series() {
-        return view('posts.series');
+        $posts = App\Post::all();
+        return view('posts.series', compact('posts'));
     }
     public function dorama() {
-        return view('posts.dorama');
+        $posts = App\Post::all();
+        return view('posts.dorama', compact('posts'));
     }
     public function cartoons() {
-        return view('posts.cartoons');
+        $posts = App\Post::all();
+        return view('posts.cartoons', compact('posts'));
     }
 
 }
