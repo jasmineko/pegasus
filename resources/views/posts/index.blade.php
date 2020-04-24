@@ -10,7 +10,7 @@
                 <h2 class="section__title">Expected premiere</h2>
             </div>
             <!-- end section title -->
-
+            
             <!-- card -->
             <div class="col-6 col-sm-4 col-lg-3 col-xl-2">
                 <div class="card">
