@@ -24,7 +24,6 @@ class CreateTitlesTable extends Migration
             $table->enum('status', ['airing', 'finished']);
             $table->string('country', 30);
             $table->text('description');
-            $table->text('info');
             $table->float('rating', 2);
         });
     }

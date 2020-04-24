@@ -43,13 +43,13 @@
             <div class="tab-pane fade show active" id="tab-1" aria-labelledby="1-tab">
                 <div class="row">
                     <!-- card -->
-                    @foreach ($posts as $post)
+                    @foreach ($titles as $title)
                     <div class="col-6 col-sm-12 col-lg-6">
                         <div class="card card--list">
                             <div class="row">
                                 <div class="col-12 col-sm-4">
                                     <div class="card__cover">
-                                        <img src=" {{ URL::asset($post->img) }}" alt="">
+                                        <img src=" {{ URL::asset($title->thumbnail) }}" alt="">
                                         <a href="#" class="card__play">
                                             <i class="icon ion-ios-play"></i>
                                         </a>
@@ -58,23 +58,23 @@
 
                                 <div class="col-12 col-sm-8">
                                     <div class="card__content">
-                                        <h3 class="card__title"><a href="#">{{ $post->title }}</a></h3>
+                                        <h3 class="card__title"><a href="#">{{ $title->name }}</a></h3>
                                         <span class="card__category">
-                                            <a href="#">Action</a>
-                                            <a href="#">Triler</a>
+                                            <a href="#">{{ $title->category }}</a>
+                                            <a href="#">{{ $title->genre }}</a>
                                         </span>
 
                                         <div class="card__wrap">
-                                            <span class="card__rate"><i class="icon ion-ios-star"></i>8.4</span>
+                                            <span class="card__rate"><i class="icon ion-ios-star"></i>{{ $title->rating }}</span>
 
                                             <ul class="card__list">
-                                                <li>HD</li>
-                                                <li>16+</li>
+                                                <li>{{ $title->country }}</li>
+                                                <li>{{ $title->status }}</li>
                                             </ul>
                                         </div>
 
                                         <div class="card__description">
-                                            <p>{{ $post->desc }}</p>
+                                            <p>{{ $title->description }}</p>
                                         </div>
                                     </div>
                                 </div>

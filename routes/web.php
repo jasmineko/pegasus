@@ -13,8 +13,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', 'PostsController@index');
-Route::get('/posts/news', 'PostsController@news');
-Route::get('/posts/series', 'PostsController@series');
-Route::get('/posts/dorama', 'PostsController@dorama');
-Route::get('/posts/cartoons', 'PostsController@cartoons');
+Route::get('/', 'TitlesController@index');
+Route::get('categories/news', 'TitlesController@news');
+Route::get('categories/series', 'TitlesController@series');
+Route::get('categories/dorama', 'TitlesController@dorama');
+Route::get('categories/cartoons', 'TitlesController@cartoons');
