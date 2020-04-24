@@ -14,8 +14,9 @@ class CreateTitlesTable extends Migration
     public function up()
     {
         Schema::create('titles', function (Blueprint $table) {
-            $table->string('name', 100)->nullable($value = false);
-            $table->primary('name');
+            $table->string('id', 100)->nullable($value = false);
+            $table->primary('id');
+            $table->string('name', 100);
             $table->text('thumbnail');
             $table->enum('category', ['series', 'dorama', 'cartoon']);
             $table->set('genre', ['comedy', 'action', 'horror', 'sci-fi', 'supernatural', 'adventure', 'romance']);
