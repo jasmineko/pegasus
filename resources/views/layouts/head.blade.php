@@ -23,6 +23,8 @@
 <link rel="apple-touch-icon" sizes="114x114" href="{{ URL::asset('icon/apple-touch-icon-114x114.png') }}">
 <link rel="apple-touch-icon" sizes="144x144" href="{{ URL::asset('icon/apple-touch-icon-144x144.png') }}">
 
+<link href="https://vjs.zencdn.net/7.7.5/video-js.css" rel="stylesheet" />
+
 <meta name="description" content="">
 <meta name="keywords" content="">
 <meta name="author" content="">
