@@ -19,7 +19,7 @@ class CreateTitlesTable extends Migration
             $table->string('name', 100);
             $table->text('thumbnail');
             $table->enum('category', ['series', 'dorama', 'cartoon']);
-            $table->set('genre', ['comedy', 'action', 'horror', 'sci-fi', 'supernatural', 'adventure', 'romance']);
+            $table->set('genre', ['comedy', 'action', 'horror', 'sci-fi', 'supernatural', 'adventure', 'romance', 'drama']);
             $table->date('release_date');
             $table->enum('status', ['airing', 'finished']);
             $table->string('country', 30);
