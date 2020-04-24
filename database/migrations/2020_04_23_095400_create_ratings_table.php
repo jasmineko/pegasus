@@ -14,10 +14,10 @@ class CreateRatingsTable extends Migration
     public function up()
     {
         Schema::create('ratings', function (Blueprint $table) {
-            $table->integer('user_id');
-            $table->foreign('user_id')->references('users')->on('id');
-            $table->integer('episode');
-            $table->foreign('episode')->references('episodes')->on('id');
+            $table->unsignedInteger('user_id');
+            $table->foreign('user_id')->references('id')->on('users');
+            $table->unsignedInteger('episode');
+            $table->foreign('episode')->references('id')->on('episodes')->onDelete('cascade');
             $table->enum('rating', ['positive', 'negative']);
             $table->timestamps();
         });

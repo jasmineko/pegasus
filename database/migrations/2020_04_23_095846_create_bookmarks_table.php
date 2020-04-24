@@ -14,10 +14,10 @@ class CreateBookmarksTable extends Migration
     public function up()
     {
         Schema::create('bookmarks', function (Blueprint $table) {
-            $table->integer('user_id');
-            $table->foreign('user_id')->references('users')->on('id');
-            $table->integer('episode');
-            $table->foreign('episode')->references('episodes')->on('id');
+            $table->unsignedInteger('user_id');
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
+            $table->unsignedInteger('episode');
+            $table->foreign('episode')->references('id')->on('episodes')->onDelete('cascade');
             $table->enum('status', ['planned', 'watching',  'completed',  'on-hold', 'dropped']);
             $table->timestamps();
         });
