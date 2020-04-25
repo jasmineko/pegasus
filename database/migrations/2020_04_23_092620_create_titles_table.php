@@ -14,8 +14,8 @@ class CreateTitlesTable extends Migration
     public function up()
     {
         Schema::create('titles', function (Blueprint $table) {
-            $table->string('id', 100)->nullable($value = false);
-            $table->primary('id');
+            $table->string('page_id', 100)->nullable($value = false);
+            $table->primary('page_id');
             $table->string('name', 100);
             $table->text('thumbnail');
             $table->enum('category', ['series', 'dorama', 'cartoon']);
@@ -24,7 +24,7 @@ class CreateTitlesTable extends Migration
             $table->enum('status', ['airing', 'finished']);
             $table->string('country', 30);
             $table->text('description');
-            $table->float('rating', 2);
+            $table->float('rating', 3, 1)->default(0.0);
         });
     }
 

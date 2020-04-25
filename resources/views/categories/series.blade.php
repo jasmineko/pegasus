@@ -28,13 +28,13 @@
                     <!-- end content tabs nav -->
 
                     <!-- content title -->
-                    <h2 class="content__title">Series</h2>
+                    <h2 class="content__title">{{ ucfirst(trans($category)) }}</h2>
                     <!-- end content title -->
                 </div>
             </div>
         </div>
     </div>
-    
+
     <div class="container">
         <!-- content tabs -->
         <div class="tab-content" id="myTabContent">

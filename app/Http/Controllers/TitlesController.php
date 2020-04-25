@@ -12,19 +12,11 @@ class TitlesController extends Controller
         return view('categories.index', compact('titles'));
     }
     public function news() {
-        $titles = App\Title::all();
+        $titles = App\Title::news();
         return view('categories.news', compact('titles'));
     }
-    public function series() {
-        $titles = App\Title::all();
-        return view('categories.series', compact('titles'));
-    }
-    public function dorama() {
-        $titles = App\Title::all();
-        return view('categories.dorama', compact('titles'));
-    }
-    public function cartoons() {
-        $titles = App\Title::all();
-        return view('categories.cartoons', compact('titles'));
+    public function category($category) {
+        $titles = App\Title::category($category);
+        return view('categories.series', compact('titles', 'category'));
     }
 }

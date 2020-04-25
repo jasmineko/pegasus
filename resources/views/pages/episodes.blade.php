@@ -26,9 +26,7 @@
                         </li>
                     </ul>
                     <!-- end content tabs nav -->
-
-                    <!-- content title -->
-                    <h2 class="content__title">Cartoons</h2>
+                    <h2 class="content__title">{{$title}}</h2>
                     <!-- end content title -->
                 </div>
             </div>
@@ -39,30 +37,33 @@
         <!-- content tabs -->
         <div class="tab-content" id="myTabContent">
             <div class="tab-pane fade show active" id="tab-2" aria-labelledby="2-tab">
-                <div class="row">
-                @foreach ($titles as $title)
-                    <!-- card -->
-                    <div class="col-6 col-sm-4 col-lg-3 col-xl-2">
-                        <div class="card">
-                            <div class="card__cover">
-                                <img src="{{ URL::asset($title->thumbnail) }}" alt="">
-                                <a href="#" class="card__play">
-                                    <i class="icon ion-ios-play"></i>
-                                </a>
+                @foreach ($episodes->pluck('season')->sortDesc()->unique() as $season)
+                    <div class="row">
+                    <h2 class="content__title">Season {{$season}}</h2>
+                    @foreach (\App\Episode::episodes_by_season($episodes, $season) as $episode)
+                        <!-- card -->
+                            <div class="col-6 col-sm-4 col-lg-3 col-xl-2">
+                                <div class="card">
+                                    <div class="card__cover">
+                                        <img src="{{ URL::asset($episode->thumbnail) }}" alt="">
+                                        <a href="#" class="card__play">
+                                            <i class="icon ion-ios-play"></i>
+                                        </a>
+                                    </div>
+                                    <div class="card__content">
+                                        <h3 class="card__title"><a href="#">{{ $episode->name }}</a></h3>
+                                        <h3 class="card__title"><a href="#">Episode {{ $episode->episode_no }}</a></h3>
+                                        <span class="card__category">
+                                    </span>
+                                        <span class="card__rate"><i class="icon ion-ios-star"></i>{{ $episode->rating }}</span>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="card__content">
-                                <h3 class="card__title"><a href="#">{{ $title->name }}</a></h3>
-                                <span class="card__category">
-                                    <a href="#">{{ $title->category }}</a>
-                                    <a href="#">{{ $title->genre }}</a>
-                                </span>
-                                <span class="card__rate"><i class="icon ion-ios-star"></i>{{ $title->rating }}</span>
-                            </div>
-                        </div>
+                            <!-- end card -->
+                        @endforeach
                     </div>
-                    <!-- end card -->
-                @endforeach
-                </div>
+                    @endforeach
+
             </div>
         </div>
         <!-- end content tabs -->

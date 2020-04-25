@@ -15,14 +15,15 @@ class CreateEpisodesTable extends Migration
     {
         Schema::create('episodes', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('name', 100);
-            $table->foreign('name')->references('id')->on('titles');
-            $table->integer('season');
-            $table->integer('episode_no');
-            $table->text('thumbnail');
-            $table->date('release_date');
-            $table->text('description');
-            $table->bigInteger('views');
+            $table->string('title', 100);
+            $table->foreign('title')->references('page_id')->on('titles')->onDelete('no action');
+            $table->integer('season')->default(1);
+            $table->integer('episode_no')->default(1);
+            $table->string('name', 50);
+            $table->text('thumbnail')->default('img/default.jpg');
+            $table->date('release_date')->default(today());
+            $table->text('description')->default('None');
+            $table->integer('views')->default(0);
             $table->text('commentaries');
         });
     }

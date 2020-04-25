@@ -7,7 +7,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-12">
-                    
+
 
                     <!-- content tabs nav -->
                     <ul class="nav nav-tabs content__tabs" id="content__tabs" role="tablist">
@@ -58,7 +58,7 @@
 
                                 <div class="col-12 col-sm-8">
                                     <div class="card__content">
-                                        <h3 class="card__title"><a href="#">{{ $title->name }}</a></h3>
+                                        <h3 class="card__title"><a href="/{{ $title->page_id }}">{{ $title->name }}</a></h3>
                                         <span class="card__category">
                                             <a href="#">{{ $title->category }}</a>
                                             <a href="#">{{ $title->genre }}</a>
@@ -84,7 +84,7 @@
                     @endforeach
                     <!-- end card -->
 
-                    
+
                 </div>
             </div>
         </div>
