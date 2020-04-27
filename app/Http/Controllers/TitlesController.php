@@ -17,6 +17,6 @@ class TitlesController extends Controller
     }
     public function category($category) {
         $titles = App\Title::category($category);
-        return view('categories.series', compact('titles', 'category'));
+        return view('categories.titles', compact('titles', 'category'));
     }
 }

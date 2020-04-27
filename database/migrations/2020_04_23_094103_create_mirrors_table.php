@@ -16,7 +16,7 @@ class CreateMirrorsTable extends Migration
         Schema::create('mirrors', function (Blueprint $table) {
             $table->unsignedInteger('id');
             $table->foreign('id')->references('id')->on('episodes')->onDelete('cascade');
-            $table->string('name');
+            $table->string('name')->default('original');
             $table->text('mirror');
         });
     }
