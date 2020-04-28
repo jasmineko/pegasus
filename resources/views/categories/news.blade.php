@@ -50,7 +50,7 @@
                                 <div class="col-12 col-sm-4">
                                     <div class="card__cover">
                                         <img src=" {{ URL::asset($title->thumbnail) }}" alt="">
-                                        <a href="#" class="card__play">
+                                        <a href="/{{ $title->page_id }}" class="card__play">
                                             <i class="icon ion-ios-play"></i>
                                         </a>
                                     </div>

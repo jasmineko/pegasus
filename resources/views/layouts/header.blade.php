@@ -5,7 +5,7 @@
 					<div class="col-12">
 						<div class="header__content">
 							<!-- header logo -->
-							<a href="http://127.0.0.1:8000/#" class="header__logo">
+							<a href="/#" class="header__logo">
 								<img src="{{ URL::asset('img/logo-pegasus.png') }}" alt="">
 							</a>
 							<!-- end header logo -->
@@ -13,19 +13,19 @@
 							<!-- header nav -->
 							<ul class="header__nav">
 								<li class="header__nav-item">
-									<a href="http://127.0.0.1:8000/categories/news" class="header__nav-link">NEW RELEASES</a>
+									<a href="/categories/news" class="header__nav-link">NEW RELEASES</a>
 								</li>
 
 								<li class="header__nav-item">
-									<a href="http://127.0.0.1:8000/categories/series" class="header__nav-link">SERIES</a>
+									<a href="/categories/series" class="header__nav-link">SERIES</a>
 								</li>
 
 								<li class="header__nav-item">
-									<a href="http://127.0.0.1:8000/categories/dorama" class="header__nav-link">DORAMA</a>
+									<a href="/categories/dorama" class="header__nav-link">DORAMA</a>
 								</li>
 
 								<li class="header__nav-item">
-									<a href="http://127.0.0.1:8000/categories/cartoons" class="header__nav-link">CARTOONS</a>
+									<a href="/categories/cartoons" class="header__nav-link">CARTOONS</a>
 								</li>
 							</ul>
 							<!-- end header nav -->
