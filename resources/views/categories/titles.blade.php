@@ -46,12 +46,12 @@
                         <div class="card">
                             <div class="card__cover">
                                 <img src="{{ URL::asset($title->thumbnail) }}" alt="">
-                                <a href="#" class="card__play">
+                                <a href="/{{ $title->page_id }}" class="card__play">
                                     <i class="icon ion-ios-play"></i>
                                 </a>
                             </div>
                             <div class="card__content">
-                                <h3 class="card__title"><a href="#">{{ $title->name }}</a></h3>
+                                <h3 class="card__title"><a href="/{{ $title->page_id }}">{{ $title->name }}</a></h3>
                                 <span class="card__category">
                                     <a href="#">{{ $title->category }}</a>
                                     <a href="#">{{ $title->genre }}</a>
