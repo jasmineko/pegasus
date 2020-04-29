@@ -37,6 +37,107 @@
         <!-- content tabs -->
         <div class="tab-content" id="myTabContent">
             <div class="tab-pane fade show active" id="tab-2" aria-labelledby="2-tab">
+                <div class="episodes_block">
+                    <div class="episodes flex">
+                        <div class="episodes_block__left">
+                            <img class = "episod_title_img" src="{{ URL::asset('img/troli.jpg') }}" alt="">
+                        </div>
+                        <div class="episodes_block__right">
+                            <table class = 'information_episode'>
+                                <tbody class = "information_episode__body">
+                                    <tr>
+                                        <td class ="information_episode__td">Просмотр:</td>
+                                        <td class ="information_episode__td">1 час</td>
+                                    </tr>
+                                    <tr>
+                                        <td class ="information_episode__td">Сериал:</td>
+                                        <td class ="information_episode__td">12</td>
+                                    </tr>
+                                    <tr>
+                                        <td class ="information_episode__td">Год:</td>
+                                        <td class ="information_episode__td">2003</td>
+                                    </tr>
+                                    <tr>
+                                        <td class ="information_episode__td">Страна:</td>
+                                        <td class ="information_episode__td">Южная Корея</td>
+                                    </tr>
+                                    <tr>
+                                        <td class ="information_episode__td">Жанр:</td>
+                                        <td class ="information_episode__td">Драма</td>
+                                    </tr>
+                                    <tr>
+                                        <td class ="information_episode__td">Перевод:</td>
+                                        <td class ="information_episode__td">Русская озвучка</td>
+                                    </tr>
+                                    <tr>
+                                        <td class ="information_episode__td">Озвучка:</td>
+                                        <td class ="information_episode__td">Русская озвучка</td>
+                                    </tr>
+                                    <tr>
+                                        <td class ="information_episode__td">В ролях:</td>
+                                        <td class ="information_episode__td">Ан Бо Хен, Кврн На Ра, Ким Да Ми,Ким Дон Хи,Ли Дэвид,Пак Со Джун</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="episode_detials">
+                        Главный герой дорамы «Итэвон Класс» Пак Сэ Рой, после стычки с сыном генерального директора крупного ресторанного бизнеса, потерял все — отца и свободу. Он решает отомстить своим обидчикам. Чтобы ближе подобраться к своей цели, освободившись из тюрьмы, он открывает ресторан.
+                    </div>
+                    <div class="video_episodes">
+                        <div class="swiper-container" id = 'session_buttons'>
+                                <div class="swiper-wrapper " id = "wrapper_buttons">
+                                    <div class="swiper-slide">
+                                        <button>1</button>
+                                    </div>
+                                    <div class="swiper-slide"><button>2</button></div>
+                                    <div class="swiper-slide">
+                                        <button>3</button>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <button>4</button>
+                                    </div>
+                                    <div class="swiper-slide">Slide 5</div>
+                                    <div class="swiper-slide">Slide 6</div>
+                                    <div class="swiper-slide">Slide 7</div>
+                                    <div class="swiper-slide">Slide 8</div>
+                                    <div class="swiper-slide">Slide 9</div>
+                                    <div class="swiper-slide">Slide 10</div>
+                                </div>
+                                <!-- Add Arrows -->
+                                <div class="arrow_right" id = "next_session"></div>
+                                <div class="arrow_left" id = "prev_session"></div>
+                        </div>
+                        <div class="video_block">
+                            <video id = 'video_realCase' controls>
+                                <source src = "{{ URL::asset('img/video_ep.mp4') }}" type="video/mp4">
+                            </video>
+                        </div>
+                        <div class="swiper-container" id = 'episode_buttons'>
+                                <div class="swiper-wrapper " id = "wrapper_buttons_episode">
+                                    <div class="swiper-slide">
+                                        <button>1</button>
+                                    </div>
+                                    <div class="swiper-slide"><button>2</button></div>
+                                    <div class="swiper-slide">
+                                        <button>3</button>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <button>4</button>
+                                    </div>
+                                    <div class="swiper-slide">Slide 5</div>
+                                    <div class="swiper-slide">Slide 6</div>
+                                    <div class="swiper-slide">Slide 7</div>
+                                    <div class="swiper-slide">Slide 8</div>
+                                    <div class="swiper-slide">Slide 9</div>
+                                    <div class="swiper-slide">Slide 10</div>
+                                </div>
+                                <!-- Add Arrows -->
+                                <div class="arrow_right" id = "next_session"></div>
+                                <div class="arrow_left" id = "prev_session"></div>
+                        </div>
+                    </div>
+                </div>
                 @foreach ($episodes->pluck('season')->sortDesc()->unique() as $season)
                     <div class="row">
                     <h2 class="content__title">Season {{$season}}</h2>

@@ -7,7 +7,9 @@
 <!-- CSS -->
 <link rel="stylesheet" href="{{ URL::asset('css/bootstrap-reboot.min.css') }}">
 <link rel="stylesheet" href="{{ URL::asset('css/bootstrap-grid.min.css') }}">
+<link rel="stylesheet" href="{{ URL::asset('css/bootstrap.min.css') }}">
 <link rel="stylesheet" href="{{ URL::asset('css/owl.carousel.min.css') }}">
+<link rel="stylesheet" href="{{ URL::asset('css/episode.css') }}">
 <link rel="stylesheet" href="{{ URL::asset('css/jquery.mCustomScrollbar.min.css') }}">
 <link rel="stylesheet" href="{{ URL::asset('css/nouislider.min.css') }}">
 <link rel="stylesheet" href="{{ URL::asset('css/ionicons.min.css') }}">
@@ -15,7 +17,11 @@
 <link rel="stylesheet" href="{{ URL::asset('css/photoswipe.css') }}">
 <link rel="stylesheet" href="{{ URL::asset('css/default-skin.css') }}">
 <link rel="stylesheet" href="{{ URL::asset('css/main.css') }}">
-
+<link rel="stylesheet" href="{{ URL::asset('css/swiper.min.css') }}">
+<script type="text/javascript" src="{{ URL::asset('js/jquery-3.3.1.min.js') }}"></script>
+<script type="text/javascript" src="{{ URL::asset('js/swiper.min.js') }}"></script>
+<script type="text/javascript" src="{{ URL::asset('js/bootstrap.min.js') }}"></script>
+<script type="text/javascript" src="{{ URL::asset('js/episode.js') }}"></script>
 <!-- Favicons -->
 <link rel="icon" type="image/png" href="{{ URL::asset('icon/favicon-32x32.png') }}" sizes="32x32">
 <link rel="apple-touch-icon" href="{{ URL::asset('icon/favicon-32x32.png') }}">

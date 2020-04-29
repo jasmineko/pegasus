@@ -191,27 +191,7 @@ ul {
 .b-description_readmore_button.b-description_readmore_button_active:before {
   color: #ff55a5;
 }
-.body:before {
-  content: '';
-  position: fixed;
-  display: block;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: 99;
-  background-color: rgba(43,43,49,0.75);
-  opacity: 0;
-  pointer-events: none;
-  -webkit-transition: 0.4s ease;
-  -moz-transition: 0.4s ease;
-  transition: 0.4s ease;
-}
-.body--active:before {
-  z-index: 99;
-  opacity: 1;
-  pointer-events: auto;
-}
+
 /*==============================
 	Header
 ==============================*/
@@ -1267,7 +1247,7 @@ ul {
   -moz-transition: 0.4s ease;
   transition: 0.4s ease;
 }
-.card__cover:hover {
+.card__cover:hover { 
   -webkit-box-shadow: 0 0 20px 0 rgba(255,88,96,0.5);
   box-shadow: 0 0 20px 0 rgba(255,88,96,0.5);
 }
