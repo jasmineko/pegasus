@@ -16,7 +16,5 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', 'TitlesController@index');
 Route::get('categories/news', 'TitlesController@news');
 Route::get('categories/{category}', 'TitlesController@category');
-//Route::get('categories/dorama', 'TitlesController@dorama');
-//Route::get('categories/cartoons', 'TitlesController@cartoons');
 
 Route::get('/{title}', 'EpisodesController@list_episodes');

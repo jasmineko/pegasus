@@ -15,6 +15,7 @@ class Title extends Model
     }
 
     public static function get_title($page_id){
-        return static::select('name')->where('page_id', $page_id)->value('name');
+        return static::where('page_id', $page_id)->first();
     }
+
 }
