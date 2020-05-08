@@ -40,7 +40,7 @@
                 <div class="episodes_block">
                     <div class="episodes flex">
                         <div class="episodes_block__left">
-                            <img class = "episod_title_img" src="{{ URL::asset('img/troli.jpg') }}" alt="">
+                            <img class = "episod_title_img" src="{{ URL::asset('img/troli') }}" alt="">
                         </div>
                         <div class="episodes_block__right">
                             <table class = 'information_episode'>
