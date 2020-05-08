@@ -65,18 +65,6 @@
                                         <td class ="information_episode__td">Genres:</td>
                                         <td class ="information_episode__td">{{ $title->genre }}</td>
                                     </tr>
-                                    <tr>
-                                        <td class ="information_episode__td">Перевод:</td>
-                                        <td class ="information_episode__td">Русская озвучка</td>
-                                    </tr>
-                                    <tr>
-                                        <td class ="information_episode__td">Озвучка:</td>
-                                        <td class ="information_episode__td">Русская озвучка</td>
-                                    </tr>
-                                    <tr>
-                                        <td class ="information_episode__td">В ролях:</td>
-                                        <td class ="information_episode__td">Ан Бо Хен, Кврн На Ра, Ким Да Ми,Ким Дон Хи,Ли Дэвид,Пак Со Джун</td>
-                                    </tr>
                                 </tbody>
                             </table>
                         </div>
