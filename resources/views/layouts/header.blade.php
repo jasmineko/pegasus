@@ -29,7 +29,7 @@
 								<button class = 'btn_btnEnterModal flex'>Войти</button>
 							</div>
 						</form>
-					</div>	
+					</div>
 				</div>
 			</div>
 		</div>
@@ -42,7 +42,7 @@
 							<p>Забыли пароль?<p>
 						</div>
 						<span class = 'close_modal' data-dismiss="modal" aria-label="Close"></span>
-						
+
 					</div>
 					<div class="modal-body smallModalPassword">
 						<p>Пожалуйста, введите свои данные, чтобы зарегистрироваться.</p>
@@ -66,7 +66,7 @@
 							<p>Регистрация</p>
 						</div>
 						<span class = 'close_modal' data-dismiss="modal" aria-label="Close"></span>
-						
+
 					</div>
 					<div class="modal-body bigModal">
 						<p>Пожалуйста, введите свои данные, чтобы зарегистрироваться.</p>
@@ -149,10 +149,12 @@
 							<!-- header auth -->
 							<div class="header__auth">
 								<div class="search_box flex">
-									<input type="text" name="search_text" id="search-text" placeholder = "Type the text">
-									<button class="header__search-btn" id = "btn_search" type="button">
-										<i class="icon ion-ios-search"></i>
-									</button>
+                                    <form action="/pages/search", method="get">
+                                        <input type="text" name="title" placeholder = "Search for a movie, TV Series that you are looking for">
+                                        <button class="header__search-btn" id = "btn_search" type="submit">
+                                            <i class="icon ion-ios-search"></i>
+                                        </button>
+                                    </form>
 								</div>
 								<a href="signin.html" class="header__sign-in" data-toggle="modal" data-target="#myModal" data-backdrop="false">
 									<i class="icon ion-ios-log-in"></i>
@@ -174,19 +176,19 @@
 			</div>
 		</div>
 
-		<!-- header search -->
-		<form action="#" class="header__search">
-			<div class="container">
-				<div class="row">
-					<div class="col-12">
-						<div class="header__search-content">
-							<input type="text" placeholder="Search for a movie, TV Series that you are looking for">
+{{--		<!-- header search -->--}}
+{{--		<form action="#" class="header__search">--}}
+{{--			<div class="container">--}}
+{{--				<div class="row">--}}
+{{--					<div class="col-12">--}}
+{{--						<div class="header__search-content">--}}
+{{--							<input type="text" placeholder="Search for a movie, TV Series that you are looking for">--}}
 
-							<button type="button">search</button>
-						</div>
-					</div>
-				</div>
-			</div>
-		</form>
-		<!-- end header search -->
+{{--							<button type="button">search</button>--}}
+{{--						</div>--}}
+{{--					</div>--}}
+{{--				</div>--}}
+{{--			</div>--}}
+{{--		</form>--}}
+{{--		<!-- end header search -->--}}
 	</header>

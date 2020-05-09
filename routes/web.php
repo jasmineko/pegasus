@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Request;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,4 +19,12 @@ Route::get('categories/news', 'TitlesController@news');
 Route::get('categories/{category}', 'TitlesController@category');
 
 Route::get('/{title}', 'EpisodesController@list_episodes');
+Route::get('/pages/search', function () {
+    $title = $_GET['title'];
+    $items = \App\Title::where([
+        ['name', 'LIKE', '%' . $title . '%'],
+    ])->get();
+
+    return view('pages.search', compact('items'));
+});
 
