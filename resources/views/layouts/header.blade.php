@@ -29,7 +29,7 @@
 								<button class = 'btn_btnEnterModal flex'>Войти</button>
 							</div>
 						</form>
-					</div>	
+					</div>
 				</div>
 			</div>
 		</div>
@@ -42,7 +42,7 @@
 							<p>Забыли пароль?<p>
 						</div>
 						<span class = 'close_modal' data-dismiss="modal" aria-label="Close"></span>
-						
+
 					</div>
 					<div class="modal-body smallModalPassword">
 						<p>Пожалуйста, введите свои данные, чтобы зарегистрироваться.</p>
@@ -66,7 +66,7 @@
 							<p>Регистрация</p>
 						</div>
 						<span class = 'close_modal' data-dismiss="modal" aria-label="Close"></span>
-						
+
 					</div>
 					<div class="modal-body bigModal">
 						<p>Пожалуйста, введите свои данные, чтобы зарегистрироваться.</p>
@@ -141,7 +141,7 @@
 								</li>
 
 								<li class="header__nav-item">
-									<a href="/categories/cartoons" class="header__nav-link">CARTOONS</a>
+									<a href="/categories/cartoon" class="header__nav-link">CARTOONS</a>
 								</li>
 							</ul>
 							<!-- end header nav -->

@@ -17,5 +17,5 @@ Route::get('/', 'TitlesController@index');
 Route::get('categories/news', 'TitlesController@news');
 Route::get('categories/{category}', 'TitlesController@category');
 
-Route::get('/{title}', 'EpisodesController@list_episodes');
-
+Route::get('/{title}', 'EpisodesController@show_episode');
+Route::get('/{title}/S{season}E{episode}', 'EpisodesController@show_episode');
