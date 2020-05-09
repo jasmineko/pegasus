@@ -141,7 +141,7 @@
 								</li>
 
 								<li class="header__nav-item">
-									<a href="/categories/cartoons" class="header__nav-link">CARTOONS</a>
+									<a href="/categories/cartoon" class="header__nav-link">CARTOONS</a>
 								</li>
 							</ul>
 							<!-- end header nav -->

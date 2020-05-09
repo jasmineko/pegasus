@@ -96,7 +96,7 @@
                         </div>
                         <div class="video_block">
                             <video id = 'video_realCase' controls>
-                                <source src = "{{ URL::asset('img/video_ep.mp4') }}" type="video/mp4">
+                                <source src = "{{ URL::asset(\App\Episode::get_episode_link($episode_id)) }}" type="video/mp4">
                             </video>
                         </div>
                         <div class="swiper-container" id = 'episode_buttons'>
@@ -133,7 +133,7 @@
                                 <div class="card">
                                     <div class="card__cover">
                                         <img src="{{ URL::asset($episode->thumbnail) }}" alt="">
-                                        <a href="#" class="card__play">
+                                        <a href="/{{ $title->page_id }}/S{{ $episode->season }}E{{ $episode->episode_no }}" class="card__play">
                                             <i class="icon ion-ios-play"></i>
                                         </a>
                                     </div>

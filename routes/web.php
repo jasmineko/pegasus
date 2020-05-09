@@ -18,7 +18,10 @@ Route::get('/', 'TitlesController@index');
 Route::get('categories/news', 'TitlesController@news');
 Route::get('categories/{category}', 'TitlesController@category');
 
-Route::get('/{title}', 'EpisodesController@list_episodes');
+Route::get('/{title}', 'EpisodesController@show_episode');
+
+Route::get('/{title}/S{season}E{episode}', 'EpisodesController@show_episode');
+
 Route::get('/pages/search', function () {
     $title = $_GET['title'];
     $items = \App\Title::where([
@@ -27,4 +30,3 @@ Route::get('/pages/search', function () {
 
     return view('pages.search', compact('items'));
 });
-
