@@ -307,3 +307,31 @@ label{
 .smallInput:focus{
     border: 1px solid #ff55a5;
 }
+.card{
+    background: none;
+    border: none;
+}
+.search_box{
+    position: absolute;
+    z-index: 100;
+    right: 150px;
+    border: none;
+    border-radius: 40px;
+    background-color: #ff55a5;
+}
+#search-text{
+    width: 0;
+    background: none;
+    border: none;
+    height: 46px;
+    outline: none;
+    color: white;
+}
+#btn_search{
+    width: 46px;
+    border: 50%;
+}
+.search_box:hover > #search-text{
+    width: 659px;
+    padding: 10px 5px;
+}

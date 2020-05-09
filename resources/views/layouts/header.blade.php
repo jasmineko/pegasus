@@ -148,10 +148,12 @@
 
 							<!-- header auth -->
 							<div class="header__auth">
-								<button class="header__search-btn" type="button">
-									<i class="icon ion-ios-search"></i>
-								</button>
-
+								<div class="search_box flex">
+									<input type="text" name="search_text" id="search-text" placeholder = "Type the text">
+									<button class="header__search-btn" id = "btn_search" type="button">
+										<i class="icon ion-ios-search"></i>
+									</button>
+								</div>
 								<a href="signin.html" class="header__sign-in" data-toggle="modal" data-target="#myModal" data-backdrop="false">
 									<i class="icon ion-ios-log-in"></i>
 									<span>sign in</span>

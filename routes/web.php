@@ -20,3 +20,4 @@ Route::get('categories/{category}', 'TitlesController@category');
 //Route::get('categories/cartoons', 'TitlesController@cartoons');
 
 Route::get('/{title}', 'EpisodesController@list_episodes');
+
