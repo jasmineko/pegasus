@@ -26,7 +26,7 @@
                         </li>
                     </ul>
                     <!-- end content tabs nav -->
-                    <h2 class="content__title">{{$title}}</h2>
+                    <h2 class="content__title">{{$title->name}}</h2>
                     <!-- end content title -->
                 </div>
             </div>
@@ -40,50 +40,36 @@
                 <div class="episodes_block">
                     <div class="episodes flex">
                         <div class="episodes_block__left">
-                            <img class = "episod_title_img" src="{{ URL::asset('img/troli') }}" alt="">
+                            <img class = "episod_title_img" src="{{ URL::asset($title->thumbnail) }}" alt="">
                         </div>
                         <div class="episodes_block__right">
                             <table class = 'information_episode'>
                                 <tbody class = "information_episode__body">
                                     <tr>
-                                        <td class ="information_episode__td">Просмотр:</td>
-                                        <td class ="information_episode__td">1 час</td>
+                                        <td class ="information_episode__td">Rating:</td>
+                                        <td class ="information_episode__td">{{ $title->rating }}/10</td>
                                     </tr>
                                     <tr>
-                                        <td class ="information_episode__td">Сериал:</td>
-                                        <td class ="information_episode__td">12</td>
+                                        <td class ="information_episode__td">Status:</td>
+                                        <td class ="information_episode__td">{{ $title->status }}</td>
                                     </tr>
                                     <tr>
-                                        <td class ="information_episode__td">Год:</td>
-                                        <td class ="information_episode__td">2003</td>
+                                        <td class ="information_episode__td">Aired:</td>
+                                        <td class ="information_episode__td">{{ $title->release_date }}</td>
                                     </tr>
                                     <tr>
-                                        <td class ="information_episode__td">Страна:</td>
-                                        <td class ="information_episode__td">Южная Корея</td>
+                                        <td class ="information_episode__td">Country:</td>
+                                        <td class ="information_episode__td">{{ $title->country }}</td>
                                     </tr>
                                     <tr>
-                                        <td class ="information_episode__td">Жанр:</td>
-                                        <td class ="information_episode__td">Драма</td>
-                                    </tr>
-                                    <tr>
-                                        <td class ="information_episode__td">Перевод:</td>
-                                        <td class ="information_episode__td">Русская озвучка</td>
-                                    </tr>
-                                    <tr>
-                                        <td class ="information_episode__td">Озвучка:</td>
-                                        <td class ="information_episode__td">Русская озвучка</td>
-                                    </tr>
-                                    <tr>
-                                        <td class ="information_episode__td">В ролях:</td>
-                                        <td class ="information_episode__td">Ан Бо Хен, Кврн На Ра, Ким Да Ми,Ким Дон Хи,Ли Дэвид,Пак Со Джун</td>
+                                        <td class ="information_episode__td">Genres:</td>
+                                        <td class ="information_episode__td">{{ $title->genre }}</td>
                                     </tr>
                                 </tbody>
                             </table>
                         </div>
                     </div>
-                    <div class="episode_detials">
-                        Главный герой дорамы «Итэвон Класс» Пак Сэ Рой, после стычки с сыном генерального директора крупного ресторанного бизнеса, потерял все — отца и свободу. Он решает отомстить своим обидчикам. Чтобы ближе подобраться к своей цели, освободившись из тюрьмы, он открывает ресторан.
-                    </div>
+                    <div class="episode_detials"> {{ $title->description }} </div>
                     <div class="video_episodes">
                         <div class="swiper-container" id = 'session_buttons'>
                                 <div class="swiper-wrapper " id = "wrapper_buttons">
