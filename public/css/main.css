@@ -69,6 +69,17 @@ a {
   -moz-transition: 0.4s ease;
   transition: 0.4s ease;
 }
+
+.form-class {
+    position: absolute!important;
+    right: 150px;
+    z-index: 100;
+}
+.input-class {
+    width: 200px!important;
+
+}
+
 a:hover,
 a:active,
 a:focus {
@@ -1247,7 +1258,7 @@ ul {
   -moz-transition: 0.4s ease;
   transition: 0.4s ease;
 }
-.card__cover:hover { 
+.card__cover:hover {
   -webkit-box-shadow: 0 0 20px 0 rgba(255,88,96,0.5);
   box-shadow: 0 0 20px 0 rgba(255,88,96,0.5);
 }

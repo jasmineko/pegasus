@@ -148,14 +148,14 @@
 
 							<!-- header auth -->
 							<div class="header__auth">
-								<div class="search_box flex">
-                                    <form action="/pages/search", method="get">
-                                        <input type="text" name="title" placeholder = "Search for a movie, TV Series that you are looking for">
+
+                                    <form action="/pages/search", method="get" class="form-class header__search-content">
+                                        <input type="text" name="title" placeholder = "Search for a movie, TV Series that you are looking for" class="input-class">
                                         <button class="header__search-btn" id = "btn_search" type="submit">
                                             <i class="icon ion-ios-search"></i>
                                         </button>
                                     </form>
-								</div>
+
 								<a href="signin.html" class="header__sign-in" data-toggle="modal" data-target="#myModal" data-backdrop="false">
 									<i class="icon ion-ios-log-in"></i>
 									<span>sign in</span>
