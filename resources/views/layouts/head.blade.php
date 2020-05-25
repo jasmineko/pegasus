@@ -20,8 +20,8 @@
 <link rel="stylesheet" href="{{ URL::asset('css/swiper.min.css') }}">
 <script type="text/javascript" src="{{ URL::asset('js/jquery-3.3.1.min.js') }}"></script>
 <script type="text/javascript" src="{{ URL::asset('js/swiper.min.js') }}"></script>
-<script type="text/javascript" src="{{ URL::asset('js/bootstrap.min.js') }}"></script>
 <script type="text/javascript" src="{{ URL::asset('js/episode.js') }}"></script>
+<script type="text/javascript" src="{{ URL::asset('js/bootstrap.min.js') }}"></script>
 <!-- Favicons -->
 <link rel="icon" type="image/png" href="{{ URL::asset('icon/favicon-32x32.png') }}" sizes="32x32">
 <link rel="apple-touch-icon" href="{{ URL::asset('icon/favicon-32x32.png') }}">

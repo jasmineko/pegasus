@@ -94,8 +94,8 @@
                                                     </a>
                                                 </div>
                                                 <div class="card__content">
-                                                    <h3 class="card__title"><a href="#">{{ $episode->name }}</a></h3>
-                                                    <h3 class="card__title"><a href="#">Episode {{ $episode->episode_no }}</a></h3>
+                                                    <h3 class="card__title"><a class = 'href_title' href="#">{{ $episode->name }}</a></h3>
+                                                    <h3 class="card__title"><a class = 'href_title' href="#">Episode {{ $episode->episode_no }}</a></h3>
                                                     <span class="card__category">
                                                 </span>
                                                     <span class="card__rate"><i class="icon ion-ios-star"></i>{{ $episode->rating }}</span>

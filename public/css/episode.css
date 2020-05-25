@@ -342,7 +342,7 @@ label{
 .content__title_session{
     color:black !important;
 }
-.card__title a{
+.href_title {
     color:black !important;
 }
 .video_episodes{
