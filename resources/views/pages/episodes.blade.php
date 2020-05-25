@@ -70,86 +70,49 @@
                         </div>
                     </div>
                     <div class="episode_detials"> {{ $title->description }} </div>
-                    <div class="video_episodes">
-                        <div class="swiper-container" id = 'session_buttons'>
-                                <div class="swiper-wrapper " id = "wrapper_buttons">
-                                    <div class="swiper-slide">
-                                        <button>1</button>
-                                    </div>
-                                    <div class="swiper-slide"><button>2</button></div>
-                                    <div class="swiper-slide">
-                                        <button>3</button>
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <button>4</button>
-                                    </div>
-                                    <div class="swiper-slide">Slide 5</div>
-                                    <div class="swiper-slide">Slide 6</div>
-                                    <div class="swiper-slide">Slide 7</div>
-                                    <div class="swiper-slide">Slide 8</div>
-                                    <div class="swiper-slide">Slide 9</div>
-                                    <div class="swiper-slide">Slide 10</div>
-                                </div>
-                                <!-- Add Arrows -->
-                                <div class="arrow_right" id = "next_session"></div>
-                                <div class="arrow_left" id = "prev_session"></div>
-                        </div>
-                        <div class="video_block">
-                            <video id = 'video_realCase' controls>
-                                <source src = "{{ URL::asset(\App\Episode::get_episode_link($episode_id)) }}" type="video/mp4">
-                            </video>
-                        </div>
-                        <div class="swiper-container" id = 'episode_buttons'>
-                                <div class="swiper-wrapper " id = "wrapper_buttons_episode">
-                                    <div class="swiper-slide">
-                                        <button>1</button>
-                                    </div>
-                                    <div class="swiper-slide"><button>2</button></div>
-                                    <div class="swiper-slide">
-                                        <button>3</button>
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <button>4</button>
-                                    </div>
-                                    <div class="swiper-slide">Slide 5</div>
-                                    <div class="swiper-slide">Slide 6</div>
-                                    <div class="swiper-slide">Slide 7</div>
-                                    <div class="swiper-slide">Slide 8</div>
-                                    <div class="swiper-slide">Slide 9</div>
-                                    <div class="swiper-slide">Slide 10</div>
-                                </div>
-                                <!-- Add Arrows -->
-                                <div class="arrow_right" id = "next_session"></div>
-                                <div class="arrow_left" id = "prev_session"></div>
-                        </div>
-                    </div>
-                </div>
-                @foreach ($episodes->pluck('season')->sortDesc()->unique() as $season)
-                    <div class="row">
-                    <h2 class="content__title">Season {{$season}}</h2>
-                    @foreach (\App\Episode::episodes_by_season($episodes, $season) as $episode)
-                        <!-- card -->
-                            <div class="col-6 col-sm-4 col-lg-3 col-xl-2">
-                                <div class="card">
-                                    <div class="card__cover">
-                                        <img src="{{ URL::asset($episode->thumbnail) }}" alt="">
-                                        <a href="/{{ $title->page_id }}/S{{ $episode->season }}E{{ $episode->episode_no }}" class="card__play">
-                                            <i class="icon ion-ios-play"></i>
-                                        </a>
-                                    </div>
-                                    <div class="card__content">
-                                        <h3 class="card__title"><a href="#">{{ $episode->name }}</a></h3>
-                                        <h3 class="card__title"><a href="#">Episode {{ $episode->episode_no }}</a></h3>
-                                        <span class="card__category">
-                                    </span>
-                                        <span class="card__rate"><i class="icon ion-ios-star"></i>{{ $episode->rating }}</span>
-                                    </div>
-                                </div>
+                    <div class="flex">
+                        <div class="video_episodes">
+                            <div class="video_block">
+                                <video id = 'video_realCase' controls>
+                                    <source src = "{{ URL::asset(\App\Episode::get_episode_link($episode_id)) }}" type="video/mp4">
+                                </video>
                             </div>
-                            <!-- end card -->
-                        @endforeach
+                        </div>
+                        
+                        <div class="all_rows">
+                            @foreach ($episodes->pluck('season')->sortDesc()->unique() as $season)
+                            <div class="row">
+                                <h2 class="content__title ">Season {{$season}}</h2>
+                                @foreach (\App\Episode::episodes_by_season($episodes, $season) as $episode)
+                                    <!-- card -->
+                                        <div class="col-6 col-sm-4 col-lg-3 col-xl-2">
+                                            <div class="card">
+                                                <div class="card__cover">
+                                                    <img src="{{ URL::asset($episode->thumbnail) }}" alt="">
+                                                    <a href="/{{ $title->page_id }}/S{{ $episode->season }}E{{ $episode->episode_no }}" class="card__play">
+                                                        <i class="icon ion-ios-play"></i>
+                                                    </a>
+                                                </div>
+                                                <div class="card__content">
+                                                    <h3 class="card__title"><a href="#">{{ $episode->name }}</a></h3>
+                                                    <h3 class="card__title"><a href="#">Episode {{ $episode->episode_no }}</a></h3>
+                                                    <span class="card__category">
+                                                </span>
+                                                    <span class="card__rate"><i class="icon ion-ios-star"></i>{{ $episode->rating }}</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- end card -->
+                                @endforeach
+                            </div>
+                            @endforeach
+                        </div>
+                        
                     </div>
-                    @endforeach
+                    
+                   
+                </div>
+               
 
             </div>
         </div>

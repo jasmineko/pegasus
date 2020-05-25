@@ -80,8 +80,8 @@
 }
 
 .video_block{
-    width: 80%;
-    margin: auto;
+    width: 90%;
+    /* margin: auto; */
     position: relative;
     height: 100%;
     background-size: cover;
@@ -92,6 +92,10 @@
     border: 4px solid linear-gradient(90deg, #ff55a5 0%, #ff5860 100%);
     outline: none;
     position: absolute;
+    height: 100%;
+}
+.all_rows{
+    padding-top: 20px;
 }
 .preloader{
     position: relative;
@@ -334,4 +338,17 @@ label{
 .search_box:hover > #search-text{
     width: 659px;
     padding: 10px 5px;
+}
+.content__title{
+    color:black !important;
+}
+.card__title a{
+    color:black !important;
+}
+.video_episodes{
+    width: 57%;
+    height: 462px;
+}
+.all_rows{
+    width: 60%;
 }
