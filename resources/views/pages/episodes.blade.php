@@ -82,7 +82,7 @@
                         <div class="all_rows">
                             @foreach ($episodes->pluck('season')->sortDesc()->unique() as $season)
                             <div class="row">
-                                <h2 class="content__title ">Season {{$season}}</h2>
+                                <h2 class="content__title_session">Season {{$season}}</h2>
                                 @foreach (\App\Episode::episodes_by_season($episodes, $season) as $episode)
                                     <!-- card -->
                                         <div class="col-6 col-sm-4 col-lg-3 col-xl-2">
